@@ -27,7 +27,6 @@ namespace KalendarzApp
             InitializeComponent();
             startDisplay();
             StartClock();
-            //toDb();
         }
 
         private void displayCalendar(int month, int year)
@@ -45,8 +44,9 @@ namespace KalendarzApp
             }
             for (int i = 1; i <= days; i++)
             {
-                UserControlDays ucDays = new UserControlDays();
-                ucDays.days(i, month, year);
+                UserControlDays ucDays = new UserControlDays(i, month, year);
+                //ucDays.days(i, month, year);
+                ucDays.days();
                 dayContainer.Children.Add(ucDays);
             }
         }
@@ -98,15 +98,5 @@ namespace KalendarzApp
         {
             ClockText.Text = DateTime.Now.ToString("HH:mm:ss");
         }
-
-
-        //public void toDb()
-        //{
-        //    Entry en = new Entry();
-        //    en.Title = "Event";
-        //    en.StartDate = DateTime.Now;
-        //    EntriesData.AddEntryToDb(en);
-        //    Console.WriteLine(EntriesData.GetAllEntries());
-        //}
     }
 }

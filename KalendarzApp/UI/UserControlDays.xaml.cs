@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using KalendarzApp.Models;
 using KalendarzApp.Data;
+using KalendarzApp.UI;
 
 namespace KalendarzApp
 {
@@ -22,45 +23,79 @@ namespace KalendarzApp
     /// </summary>
     public partial class UserControlDays : UserControl
     {
-        public UserControlDays()
+        int day_, month_, year_;
+        DateTime date_;
+        public UserControlDays(int numday, int month, int year)
         {
             InitializeComponent();
+            day_ = numday;
+            month_ = month;
+            year_ = year;
+            date_ = new DateTime(year_, month_, day_);
+            ShowEventsInListbox();
         }
 
-        public void days(int numday, int month, int year)
+        public void days()
         {
-            lbDays.Content = numday.ToString();
+            lbDays.Content = day_.ToString();
 
             DateTime now = DateTime.Now;
-            int curr_day = now.Day;
-            int curr_month = now.Month;
-            int curr_year = now.Year;
-
-            if (numday == curr_day &&
-                month == curr_month &&
-                year == curr_year)
+            if (day_ == now.Day &&
+                month_ == now.Month &&
+                year_ == now.Year)
             {
                 gridDay.Background = new SolidColorBrush(Color.FromRgb(255, 128, 128));
-            }   
+            }
+
+
         }
 
-        public void mark_day(object sender, RoutedEventArgs e)
+        private void EventsListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (checkBox.IsChecked == false)
-            {
-                checkBox.IsChecked = true;
-                dayUC.Background = new SolidColorBrush(Color.FromRgb(255, 0, 0));
-            }
-            else
-            {
-                checkBox.IsChecked = false;
-                dayUC.Background = new SolidColorBrush(Color.FromRgb(209, 209, 209));
-            }
+
+        }
+
+        //public void mark_day(object sender, RoutedEventArgs e)
+        //{
+        //    if (checkBox.IsChecked == false)
+        //    {
+        //        checkBox.IsChecked = true;
+        //        dayUC.Background = new SolidColorBrush(Color.FromRgb(255, 0, 0));
+        //    }
+        //    else
+        //    {
+        //        checkBox.IsChecked = false;
+        //        dayUC.Background = new SolidColorBrush(Color.FromRgb(209, 209, 209));
+        //    }
+        //}
+
+        public void openEventListWindow(object sender, RoutedEventArgs e)
+        {
+            EventListWindow eventListWindow = new EventListWindow(date_);
+            eventListWindow.Show();
         }
 
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ShowEventsInListbox()
+        {
+            List<Entry> listOfEvents = EntriesData.GetEntriesByDate(date_);
+            EventsListbox.Items.Clear();
+
+            if (listOfEvents.Count == 0)
+            {
+                EventsListbox.Items.Add("Brak wydarzeń na ten dzień.");
+                return;
+            }
+
+            foreach (Entry entry in listOfEvents)
+            {
+                string formattedEntry = $"{entry.StartDate:HH:mm} - {entry.Title}";
+                EventsListbox.Items.Add(formattedEntry);
+            }
         }
     }
 }

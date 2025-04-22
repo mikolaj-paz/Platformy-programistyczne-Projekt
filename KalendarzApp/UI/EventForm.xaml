@@ -5,17 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KalendarzApp"
         mc:Ignorable="d"
-        Title="EventForm" Height="501" Width="540">
-    <Grid x:Name="GridEventForm" Background="#FF64C864" Margin="0,0,0,-134">
-        <TextBox x:Name="EventText" HorizontalAlignment="Left" Margin="70,236,0,0" TextWrapping="Wrap" Text="Event Name" VerticalAlignment="Top" Width="381" Height="42" FontSize="24" TextChanged="TextBox_TextChanged_1" TextAlignment="Center"/>
-        <TextBox x:Name="HourText" HorizontalAlignment="Left" Margin="70,357,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" Width="380" Height="42" FontSize="24" TextChanged="TextBox_TextChanged" TextAlignment="Center"/>
-        <Label Content="Event" HorizontalAlignment="Left" Margin="141,175,0,0" VerticalAlignment="Top" Width="238" Height="37" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
-        <Label Content="Start Hour" HorizontalAlignment="Center" Margin="0,295,0,0" VerticalAlignment="Top" Width="238" Height="37" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
+        Title="EventForm" Height="639" Width="540">
+    <Grid x:Name="GridEventForm" Background="#FF64C864" Margin="0,0,0,-6">
+        <TextBox x:Name="EventTextBox" HorizontalAlignment="Center" Margin="0,378,0,0" TextWrapping="Wrap" Text="Event Name" VerticalAlignment="Top" Width="380" Height="42" FontSize="24" TextChanged="TextBox_TextChanged_1" TextAlignment="Center"/>
+        <Label Content="Event" HorizontalAlignment="Left" Margin="136,315,0,0" VerticalAlignment="Top" Width="238" Height="37" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
         <Button Content="Confirm" HorizontalAlignment="Center" Margin="0,553,0,0" VerticalAlignment="Top" Height="44" Width="102" Click="Button_Click" FontSize="18"/>
-        <TextBox x:Name="HourText_Kopiuj" HorizontalAlignment="Left" Margin="70,477,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" Width="380" Height="42" FontSize="24" TextChanged="TextBox_TextChanged" TextAlignment="Center"/>
-        <Label Content="End Hour" HorizontalAlignment="Center" Margin="0,416,0,0" VerticalAlignment="Top" Width="238" Height="37" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
-        <TextBox x:Name="EventText_Kopiuj" HorizontalAlignment="Center" Margin="0,118,0,0" TextWrapping="Wrap" Text="01.01.2003" VerticalAlignment="Top" Width="381" Height="42" FontSize="24" TextChanged="TextBox_TextChanged_1" TextAlignment="Center"/>
-        <Label Content="Date" HorizontalAlignment="Center" Margin="0,57,0,0" VerticalAlignment="Top" Width="238" Height="37" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
+        <TextBox x:Name="StartDateTextBox" HorizontalAlignment="Center" Margin="0,118,0,0" TextWrapping="Wrap" Text="01.01.2003 00:00" VerticalAlignment="Top" Width="381" Height="42" FontSize="24" TextChanged="TextBox_TextChanged_1" TextAlignment="Center"/>
+        <Label x:Name="StartDateLabel" Content="Start Date" HorizontalAlignment="Center" Margin="0,57,0,0" VerticalAlignment="Top" Width="238" Height="37" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
+        <TextBox x:Name="EndDateTextBox" HorizontalAlignment="Center" Margin="0,249,0,0" TextWrapping="Wrap" Text="01.01.2003 01:00" VerticalAlignment="Top" Width="380" Height="42" FontSize="24" TextChanged="TextBox_TextChanged_1" TextAlignment="Center"/>
+        <Label x:Name="EndDateLabel" Content="End Date" HorizontalAlignment="Center" Margin="0,188,0,0" VerticalAlignment="Top" Width="238" Height="37" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24"/>
 
     </Grid>
 </Window>
