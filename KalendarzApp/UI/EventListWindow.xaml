@@ -1,0 +1,15 @@
+﻿<Window x:Name="EventListWindow1" x:Class="KalendarzApp.UI.EventListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KalendarzApp.UI"
+        mc:Ignorable="d"
+        Title="EventListWindow" Height="578" Width="385" Background="Gray">
+    <Grid Margin="0,0,0,-6">
+        <ListBox x:Name="EventsListbox" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="42,88,42,125" SelectionChanged="ListBox_SelectionChanged"/>
+        <Label Content="List of events" Margin="142,23,122,448" Foreground="White" FontSize="18"/>
+        <Button x:Name="AddEventButton" Content="Add" HorizontalAlignment="Left" Margin="158,464,0,0" VerticalAlignment="Top" Height="50" Width="90" Click="Button_Click_1"/>
+
+    </Grid>
+</Window>

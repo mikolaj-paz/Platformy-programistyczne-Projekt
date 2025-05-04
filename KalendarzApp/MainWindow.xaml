@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KalendarzApp"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="771" Width="773" Background="#FFD1D1D1">
     <Grid>
+        <WrapPanel x:Name="dayContainer" Margin="27,124,21,0"/>
+        <Label Content="Poniedziałek" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" RenderTransformOrigin="0.651,4.031" Margin="27,93,0,0"/>
+        <Label Content="Wtorek" HorizontalAlignment="Left" VerticalAlignment="Top" Width="95" Margin="142,93,0,0"/>
+        <Label Content="Środa" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Margin="237,93,0,0"/>
+        <Label Content="Piątek" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Margin="441,93,0,0"/>
+        <Label Content="Sobota" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Margin="540,93,0,0"/>
+        <Label Content="Niedziela" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Margin="639,93,0,0"/>
+        <Label Content="Czwartek" HorizontalAlignment="Left" VerticalAlignment="Top" Width="94" Margin="329,93,0,0"/>
+        <Label x:Name="lbMonthYear" Content="Miesiąc" HorizontalAlignment="Left" Margin="27,20,0,0" VerticalAlignment="Top" Width="179" Height="41" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="18"/>
+        <Button x:Name="btnNext" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="271,26,0,0" VerticalAlignment="Top" Click="Button_Click_1" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btnPrev" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="211,26,0,0" VerticalAlignment="Top" Click="Button_Click" FontSize="24" FontWeight="Bold"/>
+        <TextBlock x:Name="ClockText" HorizontalAlignment="Left" Margin="580,15,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="49" Width="139" Background="White" FontSize="36"><Run Text="20:31"/><Run Language="pl-pl" Text=":00"/></TextBlock>
 
     </Grid>
 </Window>

@@ -20,7 +20,7 @@ namespace KalendarzApp.Models
         /// <summary>
         /// Ścieżka do pliku bazy danych.
         /// </summary>
-        public string DbPath = "Data/calendar.db";
+        public string DbPath = "C:\\Users\\User\\source\\repos\\Platformy-programistyczne-Projekt-Jan-Czekiel\\Platformy-programistyczne-Projekt-Jan-Czekiel\\KalendarzApp\\Data\\calendar.db";
 
         /// <summary>
         /// Konfiguruje opcje dla kontekstu bazy danych.
