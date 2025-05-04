@@ -16,7 +16,8 @@ using System.Windows.Shapes;
 namespace KalendarzApp
 {
     /// <summary>
-    /// Logika interakcji dla klasy UserControl1.xaml
+    /// Logika interakcji dla klasy UserControl1.xaml.
+    /// Ustawiwa odpowiada za puste okienka na początku miesiąca.
     /// </summary>
     public partial class UserControl1 : UserControl
     {

@@ -11,6 +11,8 @@ using System.Windows.Shapes;
 using System.Windows.Threading;
 using KalendarzApp.Models;
 using KalendarzApp.Data;
+using KalendarzApp.UI;
+using KalendarzApp.Services;
 
 namespace KalendarzApp
 {
@@ -27,30 +29,40 @@ namespace KalendarzApp
             InitializeComponent();
             startDisplay();
             StartClock();
-            //toDb();
         }
 
+
+        /// <summary>
+        /// Wyświetla kalendarz dla wybranego miesiąca i roku.
+        /// </summary>
+        /// <param name="month">Numer miesiąca (1–12).</param>
+        /// <param name="year">Rok.</param>
         private void displayCalendar(int month, int year)
         {
             lbMonthYear.Content = monthNames[month - 1] + " " + year;
 
             DateTime startOfTheMonth = new DateTime(year, month, 1);
-            int days = DateTime.DaysInMonth(year, month);
+            int daysInMonth = DateTime.DaysInMonth(year, month);
             int daysOfTheWeek = Convert.ToInt32(startOfTheMonth.DayOfWeek.ToString("d"));
 
+            dayContainer.Children.Clear();
             for (int i = 1; i < daysOfTheWeek; i++)
             {
                 UserControl1 ucBlank = new UserControl1();
                 dayContainer.Children.Add(ucBlank);
             }
-            for (int i = 1; i <= days; i++)
+            for (int i = 1; i <= daysInMonth; i++)
             {
-                UserControlDays ucDays = new UserControlDays();
-                ucDays.days(i, month, year);
+                UserControlDays ucDays = new UserControlDays(i, month, daysInMonth, year);
+                //ucDays.days(i, month, year);
+                ucDays.days();
                 dayContainer.Children.Add(ucDays);
             }
         }
 
+        /// <summary>
+        /// Ustawia domyślny widok kalendarza na bieżący miesiąc i rok.
+        /// </summary>
         private void startDisplay()
         {
             DateTime now = DateTime.Now;
@@ -60,6 +72,9 @@ namespace KalendarzApp
             displayCalendar(month, year);
         }
 
+        /// <summary>
+        /// Obsługuje kliknięcie przycisku „Poprzedni miesiąc”. Przesuwa widok o jeden miesiąc wstecz.
+        /// </summary>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             month--;
@@ -72,6 +87,9 @@ namespace KalendarzApp
             displayCalendar(month, year);
         }
 
+        /// <summary>
+        /// Obsługuje kliknięcie przycisku „Następny miesiąc”. Przesuwa widok o jeden miesiąc do przodu.
+        /// </summary>
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             month++;
@@ -94,19 +112,26 @@ namespace KalendarzApp
             timer.Start();
         }
 
+        /// <summary>
+        /// Uruchamia zegar aktualizujący godzinę co sekundę.
+        /// </summary>
         private void Timer_Tick(object sender, EventArgs e)
         {
             ClockText.Text = DateTime.Now.ToString("HH:mm:ss");
+            RefreshWindow();
+
         }
 
-
-        //public void toDb()
-        //{
-        //    Entry en = new Entry();
-        //    en.Title = "Event";
-        //    en.StartDate = DateTime.Now;
-        //    EntriesData.AddEntryToDb(en);
-        //    Console.WriteLine(EntriesData.GetAllEntries());
-        //}
+        /// <summary>
+        /// Odświeża widok kalendarza, jeśli ustawiono flagę odświeżenia w ustawieniach.
+        /// </summary>
+        private void RefreshWindow()
+        {
+            if (Settings.needToRefreshMainWindow)
+            {
+                Settings.needToRefreshMainWindow = false;
+                displayCalendar(month, year);
+            }
+        }
     }
 }
