@@ -12,7 +12,7 @@ namespace KalendarzApp.Services
     /// <summary>
     /// Usługa odpowiedzialna za pobieranie prognozy pogody.
     /// </summary>
-    public static class ForecastService
+    public class ForecastService
     {
         /// <summary>
         /// Asynchronicznie pobiera trzydniową prognozę pogody dla podanej lokalizacji.
@@ -49,7 +49,7 @@ namespace KalendarzApp.Services
         /// }
         /// </code>
         /// </note>
-        public static async Task<WeatherForecast> GetForecastAsync(string location)
+        public async Task<WeatherForecast> GetForecastAsync(string location)
         {
             using (HttpClient client = new())
             {
