@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,9 +19,9 @@ namespace KalendarzApp.Models
         public DbSet<Entry> Entries { get; set; }
 
         /// <summary>
-        /// Ścieżka do pliku bazy danych.
+        /// Zbiór kategorii wpisów w kalendarzu.
         /// </summary>
-        public string DbPath = "C:\\Users\\User\\source\\repos\\Platformy-programistyczne-Projekt-Jan-Czekiel\\Platformy-programistyczne-Projekt-Jan-Czekiel\\KalendarzApp\\Data\\calendar.db";
+        public DbSet<EntryCategory> EntryCategories { get; set; }
 
         /// <summary>
         /// Konfiguruje opcje dla kontekstu bazy danych.
@@ -28,7 +29,8 @@ namespace KalendarzApp.Models
         /// <param name="options">Opcje konfiguracyjne dla kontekstu bazy danych.</param>
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlite($"Data Source={DbPath}");
+            var dbPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "calendar.db");
+            options.UseSqlite($"Data Source={dbPath}");
         }
     }
 }
