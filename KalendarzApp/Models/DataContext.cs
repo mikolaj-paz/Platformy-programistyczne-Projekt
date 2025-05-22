@@ -21,7 +21,7 @@ namespace KalendarzApp.Models
         /// <summary>
         /// Zbiór kategorii wpisów w kalendarzu.
         /// </summary>
-        public DbSet<EntryCategory> EntryCategories { get; set; }
+        public string DbPath = "Data/calendar.db";
 
         /// <summary>
         /// Konfiguruje opcje dla kontekstu bazy danych.
