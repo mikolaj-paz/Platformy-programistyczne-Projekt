@@ -47,9 +47,14 @@ namespace KalendarzApp.Models
         public string Location { get; set; } = string.Empty;
 
         /// <summary>
-        /// Kategorię wpisu.
+        /// Klucz zewnętrzny do kategorii wpisu.
         /// </summary>
-        public string Category { get; set; } = string.Empty;
+        public int CategoryId { get; set; }
+
+        /// <summary>
+        /// Kategoria wpisu.
+        /// </summary>
+        public EntryCategory? Category { get; set; }
 
         /// <summary>
         /// Wzorzec powtarzania wpisu.

@@ -1,6 +1,7 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
+using KalendarzApp.Data;
 
 namespace KalendarzApp
 {
@@ -9,6 +10,12 @@ namespace KalendarzApp
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            DbInitializer.EnsureDatabase();
+        }
     }
 
 }
