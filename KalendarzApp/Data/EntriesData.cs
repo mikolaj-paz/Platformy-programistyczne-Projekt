@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using KalendarzApp.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace KalendarzApp.Data
 {
@@ -50,7 +51,10 @@ namespace KalendarzApp.Data
         {
             using (var db = new DataContext())
             {
-                return db.Entries.OrderBy(e => e.StartDate).ToList();
+                return db.Entries
+                    .Include(e => e.Category)
+                    .OrderBy(e => e.StartDate)
+                    .ToList();
             }
         }
 
@@ -64,7 +68,10 @@ namespace KalendarzApp.Data
         {
             using (var db = new DataContext())
             {
-                var entry = db.Entries.Find(entryId);
+                var entry = db.Entries
+                    .Include(e => e.Category)
+                    .FirstOrDefault(e => e.Id == entryId);
+
                 if (entry != null)
                 {
                     return entry;
@@ -86,6 +93,7 @@ namespace KalendarzApp.Data
             using (var db = new DataContext())
             {
                 return db.Entries
+                    .Include(e => e.Category)
                     .Where(e => e.StartDate.Month == month.Month && e.StartDate.Year == month.Year)
                     .OrderBy(e => e.StartDate)
                     .ToList();
@@ -102,6 +110,7 @@ namespace KalendarzApp.Data
             using (var db = new DataContext())
             {
                 return db.Entries
+                    .Include(e => e.Category)
                     .OrderBy(e => e.StartDate)
                     .Take(num)
                     .ToList();
@@ -118,6 +127,7 @@ namespace KalendarzApp.Data
             using (var db = new DataContext())
             {
                 return db.Entries
+                    .Include(e => e.Category)
                     .Where(e => e.StartDate.Date == date.Date)
                     .OrderBy(e => e.StartDate)
                     .ToList();
