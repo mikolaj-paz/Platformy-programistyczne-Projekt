@@ -140,7 +140,7 @@ namespace KalendarzApp
 
             if (dayNum != -1)
             {
-                var index = await new ForecastService().GetForecastAsync("Warszawa");
+                var index = await new ForecastService().GetForecastAsync(Settings.location);
                 string message = "";
 
                 var temp = index.Forecast.ForecastDays[dayNum].Day.AvgTempC;

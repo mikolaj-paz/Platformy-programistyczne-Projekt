@@ -36,6 +36,7 @@ namespace KalendarzApp.UI
             _eventId = eventId;
             _entry = EntriesData.GetEntryById(_eventId);
             fillTextEntries();
+            fillCategoryCombobox();
         }
 
 
@@ -72,7 +73,11 @@ namespace KalendarzApp.UI
             EndDateTextBox.Text = endDateTimeFormatted;
             EventTextBox.Text = _entry.Title.ToString();
             LocationTextBox.Text = _entry.Location.ToString();
-            CategoryTextBox.Text = _entry.Category.ToString();
+            
+            List<EntryCategory> categories = EntryCategoriesData.GetAllCategories();
+            string entryCategoryName = categories.FirstOrDefault(c => c.Id == _entry.CategoryId)?.Name ?? "Brak kategorii";
+            CategoryCombobox.SelectedValue = $"{_entry.CategoryId}. {entryCategoryName}";
+
             DescriptionTextBox.Text = _entry.Description.ToString();            
         }
 
@@ -116,7 +121,7 @@ namespace KalendarzApp.UI
                     StartDate = startDate,
                     EndDate = endDate,
                     Location = LocationTextBox.Text,
-                    Category = CategoryTextBox.Text,
+                    CategoryId = CategoryCombobox.SelectedIndex + 1,
                     Description = EventTextBox.Text
                 };
 
@@ -137,6 +142,38 @@ namespace KalendarzApp.UI
             catch (Exception ex)
             {
                 MessageBox.Show($"Wystąpił błąd: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Otwiera okno edycji kategorii wydarzenia.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CategoryWindowButton_Click(object sender, RoutedEventArgs e)
+        {
+            CategoryWindow categoryWindow = new CategoryWindow();
+            categoryWindow.Show();
+        }
+        /// <summary>
+        /// Obsługuje zmianę wyboru w polu wyboru kategorii. (Obecnie niewykorzystane.)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CategoryCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        /// <summary>
+        /// Wypełnia pole wyboru kategorii dostępnych kategorii z bazy danych.
+        /// </summary>
+        void fillCategoryCombobox()
+        {
+            CategoryCombobox.Items.Clear();
+            List<EntryCategory> categories = EntryCategoriesData.GetAllCategories();
+            foreach (EntryCategory category in categories)
+            {
+                CategoryCombobox.Items.Add($"{category.Id}. {category.Name}");
             }
         }
     }

@@ -11,14 +11,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace KalendarzApp.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20250522105356_AddEntryCategory")]
-    partial class AddEntryCategory
+    [Migration("20250525152759_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "9.0.3");
+            modelBuilder.HasAnnotation("ProductVersion", "9.0.4");
 
             modelBuilder.Entity("KalendarzApp.Models.Entry", b =>
                 {

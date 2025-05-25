@@ -12,6 +12,6 @@ namespace KalendarzApp.UI
     static class Settings
     {
         public static bool needToRefreshMainWindow = false;
-        public static string location = "Wrocław";
+        public static string location = "Warszawa";
     }
 }

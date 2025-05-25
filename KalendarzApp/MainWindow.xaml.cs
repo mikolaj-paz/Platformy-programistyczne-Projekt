@@ -23,12 +23,13 @@ namespace KalendarzApp
     {
         int month, year;
         string[] monthNames = { "Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień" };
-        
+        string[] cities = { "Warszawa", "Berlin", "Madrid", "Roma", "Moskva", "New york", "Beijing", "Tokio", "Buenos Aires", "Kinshasa" };
         public MainWindow()
         {
             InitializeComponent();
             startDisplay();
             StartClock();
+            fillCityCombobox();
         }
 
 
@@ -132,6 +133,28 @@ namespace KalendarzApp
                 Settings.needToRefreshMainWindow = false;
                 displayCalendar(month, year);
             }
+        }
+        /// <summary>
+        ///     Obsługuje zmianę wyboru miasta w comboboxie. Ustawia wybrane miasto jako lokalizację w ustawieniach i oznacza potrzebę odświeżenia głównego okna.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void CityCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Settings.location = CityCombobox.SelectedItem.ToString();
+            Settings.needToRefreshMainWindow = true;
+        }
+        /// <summary>
+        /// Wypełnia combobox miastami do wyboru w prognozie pogody.
+        /// </summary>
+        private void fillCityCombobox()
+        {
+            CityCombobox.Items.Clear();
+            foreach (string city in cities)
+            {
+                CityCombobox.Items.Add(city);
+            }
+            CityCombobox.SelectedIndex = 0;
         }
     }
 }
