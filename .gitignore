@@ -361,3 +361,12 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# DocFX build artifacts
+_site/
+api/
+
+# Backup/timestamp files
+*.tmp
+*.bak
+*.swp
