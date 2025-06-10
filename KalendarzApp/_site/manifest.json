@@ -1,0 +1,453 @@
+{
+  "source_base_path": "C:/Users/mikol/source/repos/KalendarzApp/KalendarzApp",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.App.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.App.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.App",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.App.yml\" sourcestartlinenumber=\"1\">Główna klasa aplikacji WPF KalendarzApp.\nOdpowiada za inicjalizację aplikacji oraz uruchomienie logiki startowej.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Data.DbInitializer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Data.DbInitializer.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Data.DbInitializer",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Data.DbInitializer.yml\" sourcestartlinenumber=\"1\">Klasa pomocnicza odpowiedzialna za inicjalizację bazy danych aplikacji.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Data.EntriesData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Data.EntriesData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Data.EntriesData",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Data.EntriesData.yml\" sourcestartlinenumber=\"1\">Klasa EntriesData zawiera metody do zarządzania wpisami w bazie danych.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Data.EntryCategoriesData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Data.EntryCategoriesData.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Data.EntryCategoriesData",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Data.EntryCategoriesData.yml\" sourcestartlinenumber=\"1\">Zapewnia operacje na kategoriach wpisów w kalendarzu, takie jak dodawanie nowych kategorii oraz pobieranie istniejących.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.EventForm.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.EventForm.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.EventForm",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.EventForm.yml\" sourcestartlinenumber=\"1\">Okno formularza służącego do tworzenia nowego wydarzenia w kalendarzu.\nAutomatycznie ustawia datę i proponowaną godzinę rozpoczęcia oraz zakończenia.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.MainWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.MainWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.MainWindow",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.MainWindow.yml\" sourcestartlinenumber=\"1\">Interaction logic for MainWindow.xaml</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Migrations.InitialCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Migrations.InitialCreate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Migrations.InitialCreate",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Migrations.InitialCreate.yml\" sourcestartlinenumber=\"1\">A base class inherited by each EF Core migration.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Migrations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Migrations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Models.Condition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Models.Condition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Models.Condition",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Models.Condition.yml\" sourcestartlinenumber=\"1\">Reprezentuje warunki pogodowe pobrane z weatherapi.com.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Models.DataContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Models.DataContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Models.DataContext",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Models.DataContext.yml\" sourcestartlinenumber=\"1\">Reprezentuje kontekst bazy danych dla aplikacji Kalendarz.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Models.Entry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Models.Entry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Models.Entry",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Models.Entry.yml\" sourcestartlinenumber=\"1\">Reprezentuje wpis w kalendarzu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Models.EntryCategory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Models.EntryCategory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Models.EntryCategory",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Models.EntryCategory.yml\" sourcestartlinenumber=\"1\">Reprezentuje kategorię wpisów w kalendarzu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Models.Forecast.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Models.Forecast.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Models.Forecast",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Models.Forecast.yml\" sourcestartlinenumber=\"1\">Reprezentuje prognozę pogody. Dane pochodzą ze strony weatherapi.com.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Models.ForecastDay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Models.ForecastDay.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Models.ForecastDay",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Models.ForecastDay.yml\" sourcestartlinenumber=\"1\">Reprezentuje prognozę pogody na jeden dzień pobraną z weatherapi.com.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Models.WeatherForecast.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Models.WeatherForecast.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Models.WeatherForecast",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Models.WeatherForecast.yml\" sourcestartlinenumber=\"1\">Reprezentuje prognozę pogody.\nDane pochodzą ze strony weatherapi.com.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Models.WeatherForecastDay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Models.WeatherForecastDay.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Models.WeatherForecastDay",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Models.WeatherForecastDay.yml\" sourcestartlinenumber=\"1\">Reprezentuje prognozę pogody na jeden dzień pobraną z weatherapi.com.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Services.ForecastService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Services.ForecastService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Services.ForecastService",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.Services.ForecastService.yml\" sourcestartlinenumber=\"1\">Usługa odpowiedzialna za pobieranie prognozy pogody.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.Services",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.UI.CategoryWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.UI.CategoryWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.UI.CategoryWindow",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.UI.CategoryWindow.yml\" sourcestartlinenumber=\"1\">Logika interakcji dla klasy CategoryWindow.xaml</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.UI.EventDetailWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.UI.EventDetailWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.UI.EventDetailWindow",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.UI.EventDetailWindow.yml\" sourcestartlinenumber=\"1\">Okno wyświetlające szczegóły wydarzenia, umożliwiające edycję i usunięcie istniejącego wpisu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.UI.EventListWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.UI.EventListWindow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.UI.EventListWindow",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.UI.EventListWindow.yml\" sourcestartlinenumber=\"1\">Okno wyświetlające listę wydarzeń przypisanych do konkretnej daty.\nUmożliwia otwarcie szczegółów wybranego wydarzenia lub dodanie nowego.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.UI.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.UI",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.UserControl1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.UserControl1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.UserControl1",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.UserControl1.yml\" sourcestartlinenumber=\"1\">Logika interakcji dla klasy UserControl1.xaml.\nUstawiwa odpowiada za puste okienka na początku miesiąca.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.UserControlDays.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.UserControlDays.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp.UserControlDays",
+      "Summary": "<p sourcefile=\"api/KalendarzApp.UserControlDays.yml\" sourcestartlinenumber=\"1\">Logika interakcji dla kontrolki reprezentującej pojedynczy dzień w kalendarzu.\nZawiera dane o dacie, wyświetla wydarzenia i prognozę pogody.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/KalendarzApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/KalendarzApp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "KalendarzApp",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
